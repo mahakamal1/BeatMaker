@@ -57,7 +57,7 @@ svg{
 .kick-track,.tom-track,.openhat-track{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 70%;
     margin-top: 5rem;
 }
