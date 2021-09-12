@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/itunes.png">
+    <title>Beat Maker</title>
+</head>
+<body>
+    <div class="sequencer">
+        <div class="kick-track">
+            <div class="controls">
+                <h1>kicks</h1>
+                <button data-track="0" class="mute kick-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="kick-select" id="kick-select">
+                    <option value="sounds/kick-808.wav">kick-808</option>
+                    <option value="sounds/kick-classic.wav">kick-classic</option>
+                    <option value="sounds/kick-acoustic01.wav">kick-acoustic01</option>
+                </select>
+            </div>
+            <div class="kicks">
+                <div class="pad pad-kick b0"></div>
+                <div class="pad pad-kick b1"></div>
+                <div class="pad pad-kick b2"></div>
+                <div class="pad pad-kick b3"></div>
+                <div class="pad pad-kick b4"></div>
+                <div class="pad pad-kick b5"></div>
+            </div>
+        </div>
+        <div class="tom-track">
+            <div class="controls">
+                <h1>toms</h1>
+                <button data-track="1" class="mute tom-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="tom-select" id="tom-select">
+                    <option value="sounds/tom-808.wav">tom-808</option>
+                    <option value="sounds/tom-lofi.wav">tom-lofi</option>
+                    <option value="sounds/tom-acoustic01.wav">tom-acoustic01</option>
+                </select>
+            </div>
+            <div class="toms">
+                <div class="pad pad-tom b0"></div>
+                <div class="pad pad-tom b1"></div>
+                <div class="pad pad-tom b2"></div>
+                <div class="pad pad-tom b3"></div>
+                <div class="pad pad-tom b4"></div>
+                <div class="pad pad-tom b5"></div>
+            </div>
+        </div>
+        <div class="openhat-track">
+            <div class="controls">
+                <h1>openhat</h1>
+                <button data-track="2" class="mute openhat-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="openhat-select" id="openhat-select">
+                    <option value="sounds/openhat-808.wav">openhat-808</option>
+                    <option value="sounds/openhat-analog.wav">openhat-analog</option>
+                    <option value="sounds/openhat-slick.wav">openhat-acoustic01</option>
+                </select>
+            </div>
+            <div class="openhats">
+                <div class="pad pad-openhat b0"></div>
+                <div class="pad pad-openhat b1"></div>
+                <div class="pad pad-openhat b2"></div>
+                <div class="pad pad-openhat b3"></div>
+                <div class="pad pad-openhat b4"></div>
+                <div class="pad pad-openhat b5"></div>
+            </div>
+        </div>
+        <button class="play">Play <i class="fas fa-play"></i></button>
+        <div class="tempo">
+            <input type="range" class="tempo-slider" min='20' max='300' value="150">
+            <p>tempo <span class="tempo-num">150</span></p>
+        </div>
+    </div>
+    <audio class="kick-sound" src="sounds/kick-808.wav"></audio>
+    <audio class="tom-sound" src="sounds/tom-808.wav"></audio>
+    <audio class="openhat-sound" src="sounds/openhat-808.wav"></audio>
+
+
+     <script src="app.js"></script>
+</body>
+</html>

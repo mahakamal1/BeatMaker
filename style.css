@@ -1,0 +1,136 @@
+:root{
+    --dark1 : #22577A;
+    --light1 : #38A3A5;
+    --dark2 : #FFB319;
+    --light2 : #FFE194;
+    --dark3 : #FA8072;
+    --light3 : #FFDAB9;
+    --active : #F8485E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sequencer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.pad-openhat,
+.pad-tom,
+.pad-kick{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem .5rem;
+    cursor: pointer;
+}
+i,
+svg{
+    pointer-events: none;
+}
+.pad-kick{
+    background-color: var(--light1);
+}
+.pad-kick.active{
+    background-color: var(--dark1);
+}
+.pad-tom{
+    background-color: var(--light2);
+}
+.pad-tom.active{
+    background-color: var(--dark2);
+}
+.pad-openhat{
+    background-color: var(--light3);
+}
+.pad-openhat.active{
+    background-color: var(--dark3);
+}
+.pad{
+    transition: all .5s ease;
+}
+
+.kick-track,.tom-track,.openhat-track{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-top: 5rem;
+}
+.kicks,
+.toms,
+.openhats{
+    display: flex;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin: 0 2rem;
+}
+
+.mute{
+    padding: .5rem 1rem;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+select{
+    padding: .5rem 1rem;
+    color: black;
+    font-size: 16px;
+}
+.play{
+    padding: 1rem 2rem;
+    font-size: 20px;
+    margin-top: 2rem;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.play.active{
+    background-color: var(--active);
+}
+.mute{
+    border: none;
+    transition: all .5s ease;
+}
+.mute.active{
+    background-color: var(--active);
+}
+.tempo{
+    margin: 3rem;
+    width: 30%;
+}
+.tempo p {
+    font-size: 20px;
+    margin: 2rem;
+    text-align: center;
+}
+.tempo-slider{
+    padding: .2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0;
+    width: 100%;
+    position: relative;
+    background-color:black;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+@keyframes tackPlay{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
